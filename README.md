@@ -1,2 +1,2 @@
 # weather-app
-A Weather App 
+An easy to use weather app to quickly get to know the outside weather by city or zip code. 
