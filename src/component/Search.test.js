@@ -1,8 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import Search from './Search';
 
-test('renders learn react link', () => {
-  render(<Search />);
-  const linkElement = screen.getByText(/learn react/i);
+test('renders select component', () => {
+  let scope = {
+    state: {
+      zipCities: [],
+      zipCity: {city:'mycity'}
+    },
+    handleChange(){
+
+    }
+  };
+  render(<Search {...scope} />);
+  const linkElement = screen.getByText(/mycity/i);
   expect(linkElement).toBeInTheDocument();
 });

@@ -11,29 +11,29 @@ import moment from 'moment';
 
 class App extends Component {
 
-  state = {
-    format: 'F',
-    zipCities: [],
-    zipCity: undefined,
-    currentWeather: {
-      mainDesc: '',
-      currentTemp: '',
-      feelsLike: '',
-      time: ''
-    },
-    hourly: []
-  }
-
-  componentDidMount() {
-    this.setState({ zipCities: Service.getZipCities() });
+  constructor(props) {
+    super(props);
     let current = Service.getCurrentWeatherDefault();
-    this.setState({
+    this.state = {
+      format: 'F',
+      zipCities: Service.getZipCities(),
+      zipCity: {
+        zip : 8520,
+        city: 'East Windsor',
+        state_id : 'NJ'
+      },
       currentWeather: {
         mainDesc: current.weather[0].main,
         currentTemp: current.main.temp,
         time: current.dt
-      }
-    });
+      },
+      daily: [],
+      hourly: []
+    }
+  }
+
+  componentDidMount() {
+ 
   }
 
   handleChange = (targetName) => (selectedOption) => {
@@ -93,7 +93,7 @@ class App extends Component {
 
   render() {
     const { loading } = this.state;
-    const isExtendedDataAvailable = false; 
+    const isExtendedDataAvailable = false;
     return (
       <div className="App">
         <Header />
