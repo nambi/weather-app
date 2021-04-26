@@ -1,0 +1,26 @@
+[
+    {
+       "value":"1001",
+       "label" :"Agawam,MA",
+        "zip": "1001",
+        "lat": "42.06259",
+        "lng": "-72.62589",
+        "city": "Agawam",
+        "state_id": "MA",
+        "state_name": "Massachusetts",
+        "county_name": "Hampden",
+        "timezone": "America/New_York"
+    },
+    {
+        "value":"1002",
+        "label" :"Amherst,MA",
+        "zip": "1002",
+        "lat": "42.37492",
+        "lng": "-72.4621",
+        "city": "Amherst",
+        "state_id": "MA",
+        "state_name": "Massachusetts",
+        "county_name": "Hampshire",
+        "timezone": "America/New_York"
+    }
+]
