@@ -1,0 +1,284 @@
+{
+    "lat": 39.262,
+    "lon": -84.82,
+    "timezone": "America/New_York",
+    "timezone_offset": -14400,
+    "current": {
+        "dt": 1619325731,
+        "sunrise": 1619347670,
+        "sunset": 1619396773,
+        "temp": 282.75,
+        "feels_like": 282.3,
+        "pressure": 1011,
+        "humidity": 81,
+        "dew_point": 279.65,
+        "uvi": 0,
+        "clouds": 90,
+        "visibility": 10000,
+        "wind_speed": 1.54,
+        "wind_deg": 310,
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04n"
+            }
+        ]
+    },
+    "minutely": [
+        {
+            "dt": 1619325780,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619325840,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619325900,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619325960,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326020,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326080,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326140,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326200,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326260,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326320,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326380,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326440,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326500,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326560,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326620,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326680,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326740,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326800,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326860,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326920,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619326980,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327040,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327100,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327160,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327220,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327280,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327340,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327400,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327460,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327520,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327580,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327640,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327700,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327760,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327820,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327880,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619327940,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328000,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328060,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328120,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328180,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328240,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328300,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328360,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328420,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328480,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328540,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328600,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328660,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328720,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328780,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328840,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328900,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619328960,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619329020,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619329080,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619329140,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619329200,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619329260,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619329320,
+            "precipitation": 0
+        },
+        {
+            "dt": 1619329380,
+            "precipitation": 0
+        }
+    ],
+    "alerts": [
+        {
+            "sender_name": "NWS Wilmington (Southwestern Ohio)",
+            "event": "Special Weather Statement",
+            "start": 1619321460,
+            "end": 1619333100,
+            "description": "As skies clear behind the departing cloud shield this early\nmorning, areas of fog will develop. This fog will be dense at\ntimes through daybreak and then clear in the morning."
+        }
+    ]
+}

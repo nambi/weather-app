@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom:10px;
+}
+
+.App-footer {
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.main-container{
+  min-height: 70vh;
+}
+
+#loading {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left:40%;
+  animation: spin 2s linear infinite;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.search-container{
+  min-width: 20px;
+  align-items: center;
+  justify-content: center;
+
+}
+.current-weather-container{
+ padding:10px;
+ background-color:antiquewhite;
+
+
+}
+
+
+.hourly-weather-container{
+  padding:10px;
+  background-color:aliceblue;
+}
+.hourly-weather-container .row{
+    padding : 5px;
+}
+
+.daily-weather-container{
+  padding:10px;
+  background-color: bisque;
+}
+.daily-weather-container .row{
+    padding : 5px;
+}
