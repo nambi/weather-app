@@ -26,7 +26,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({ zipCities: Service.getZipCities() });
-    let current = Service.getCurrentWeather();
+    let current = Service.getCurrentWeatherDefault();
     this.setState({
       currentWeather: {
         mainDesc: current.weather[0].main,
@@ -37,16 +37,9 @@ class App extends Component {
   }
 
   handleChange = (targetName) => (selectedOption) => {
-    let s = selectedOption;
-    this.setState({ zipCity: s });
-    let current = Service.getCurrentWeather();
-    this.setState({
-      currentWeather: {
-        mainDesc: current.weather[0].main,
-        currentTemp: current.main.temp,
-        time: current.dt
-      }
-    });
+
+    Service.getCurrentWeather(this, selectedOption);
+    this.setState({ loading: true });
   }
 
   handleSearch = (e) => {
@@ -99,19 +92,30 @@ class App extends Component {
   }
 
   render() {
-    const { zipCities, zipCity, currentWeather } = this.state;
-
+    const { loading } = this.state;
+    const isExtendedDataAvailable = false; 
     return (
       <div className="App">
         <Header />
         <div className="container-fluid main-container">
           <Search {...this} />
-          <div className="container-fluid search-results">
-            <CurrentWeather {...this} />
-            <HourlyWeather {...this} />
-            <DailyWeather {...this} />
-          </div>
+          {loading &&
+            <div id="loading">
+            </div>
+          }
+          {!loading &&
+            <div className="container-fluid search-results">
+              <CurrentWeather {...this} />
+              {isExtendedDataAvailable &&
+                <div>
+                  <HourlyWeather {...this} />
+                  <DailyWeather {...this} />
+                </div>
+              }
+            </div>
+          }
         </div>
+
         <Footer />
       </div>
     );

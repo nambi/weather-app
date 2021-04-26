@@ -17,6 +17,12 @@ render(){
               className="form-select-station"
               name="zipCity"
               value={zipCity}
+              getOptionLabel={option =>
+                `${option.city},${option.state_id}`
+              }
+              getOptionValue={option =>
+                `${option.zip}`
+              }
               onChange={this.props.handleChange('zip')}
               options={zipCities}
               placeholder="Select a city"

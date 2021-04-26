@@ -38,6 +38,23 @@
   min-height: 70vh;
 }
 
+#loading {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left:40%;
+  animation: spin 2s linear infinite;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -51,12 +68,19 @@
   }
 }
 
+.search-container{
+  min-width: 20px;
+  align-items: center;
+  justify-content: center;
+
+}
 .current-weather-container{
  padding:10px;
  background-color:antiquewhite;
 
 
 }
+
 
 .hourly-weather-container{
   padding:10px;
