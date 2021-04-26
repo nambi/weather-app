@@ -5,6 +5,8 @@ An easy to use weather app to quickly get to know the outside weather by city or
 
  Select a city from available cities and it will get the current weather details 
 
+![Alt text](/public/current-state-apr26.png?raw=true "Optional Title")
+
 
 # Defects 
 
@@ -15,9 +17,15 @@ An easy to use weather app to quickly get to know the outside weather by city or
 # Roadmap 
 
 1. Cache the data for the hour 
-2. Autocomplete / type ahead function can be implemented for city selection 
+2. Autocomplete / type ahead function can be implemented for city selection for all US cities 
 3. Default the city based on user location 
 4. Can host this site to firebase 
+5. Show hourly predictions 
+6. Show 10 days ahead predictions 
+7. Display breaking news 
+8. Display weather icons based on the current state of the weather (rain, cloud,sunny)
+9. Change Fahrenheit to Celcius vice-versa 
+10. Show the map of the current city cirle with latitude and longitude ranges 
 
 ## Available Scripts
 
