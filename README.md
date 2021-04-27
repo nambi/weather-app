@@ -1,20 +1,31 @@
 # Weather App 
 An easy to use weather app to quickly get to know the outside weather by city or zip code. 
 
-# Current Use cases 
+## Current Use cases 
 
  Select a city from available cities and it will get the current weather details 
 
 ![Alt text](/public/current-state-apr26.png?raw=true "Optional Title")
 
 
-# Defects 
+## High Level Design
+
+1. App is the root component and houses Search, Current Weather, HourlyWeather components.
+2. The data retrieval and transformations are handled by Service and DataTransform utility classes 
+3. A dedicated RESTClient util acts as transport layer to handle the AJAX communication and handle the errors. 
+4. Dummy models are stored in data/ for testing 
+4. The Service can be extended as we scale 
+5. Additional utilities can be bridged for other formatting needs 
+6. Using only App.css for simplicity but ideally each component styling can be added in their respective CSS files 
+7. Added both testing-library and Jest test cases as sample but can be improved to cover additional test scenarios. 
+
+## Defects 
 
 1. Few cities have multiple zip codes and duplicate options should not be displayed 
 2. As of time needs to be calculated with city's local timezone 
 
 
-# Roadmap 
+## Roadmap 
 
 1. Cache the data for the hour 
 2. Autocomplete / type ahead function can be implemented for city selection for all US cities 
