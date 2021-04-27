@@ -3,12 +3,12 @@ import './App.css';
 
 class Header extends Component {
 
-
+    HEADER_CONTENT = 'Weather App';
     render() {
 
         return (
             <header className="App-header">
-                <p>Weather App</p>
+                <p>{this.HEADER_CONTENT}</p>
             </header>
         );
     }

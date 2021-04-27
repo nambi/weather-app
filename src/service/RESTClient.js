@@ -1,4 +1,7 @@
 
+/**
+ * Utility to make the service calls asynchronously 
+ */
 const RESTClient = {
 
     /**

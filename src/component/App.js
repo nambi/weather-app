@@ -6,91 +6,37 @@ import HourlyWeather from './HourlyWeather';
 import DailyWeather from './DailyWeather';
 import CurrentWeather from './CurrentWeather';
 import './App.css';
-import Service from './../service/Service';
-import moment from 'moment';
+import WeatherService from './../service/WeatherService';
+import LocationService from './../service/LocationService';
 
+/**
+ * App parent component 
+ */
 class App extends Component {
-
+  DEFAULT_UNITS_FORMAT = 'F';
   constructor(props) {
     super(props);
-    let current = Service.getCurrentWeatherDefault();
+    this.weatherService = new WeatherService(this);
+    this.locationService = new LocationService(this);
+    let defaultWeather = this.weatherService.getCurrentWeatherDefault();
+    let cities = this.locationService.getZipCities();
+    let defaultCity = this.locationService.getDefaultZipCity();
     this.state = {
-      format: 'F',
-      zipCities: Service.getZipCities(),
-      zipCity: {
-        zip : 8520,
-        city: 'East Windsor',
-        state_id : 'NJ'
-      },
-      currentWeather: {
-        mainDesc: current.weather[0].main,
-        currentTemp: current.main.temp,
-        time: current.dt
-      },
-      daily: [],
-      hourly: []
+      format: this.DEFAULT_UNITS_FORMAT,
+      zipCities: cities,
+      zipCity: defaultCity,
+      currentWeather: defaultWeather
     }
   }
 
   componentDidMount() {
- 
+    console.log('App is mounted successfully');
   }
 
   handleChange = (targetName) => (selectedOption) => {
-
-    Service.getCurrentWeather(this, selectedOption);
+    this.weatherService.getCurrentWeather(selectedOption);
     this.setState({ loading: true });
   }
-
-  handleSearch = (e) => {
-
-    e && e.preventDefault();
-
-  }
-
-  getCurrentCity = (s) => {
-
-    if (this.state.zipCity) {
-      return this.state.zipCity.city + "," + this.state.zipCity.state_id + "," + this.state.zipCity.zip;
-    } else {
-      return 'East Windsor,NJ,08520';
-    }
-
-  }
-
-  getCurrentTime = (s) => {
-    let time = undefined;
-    if (this.state.currentWeather) {
-      time = moment(this.state.currentWeather.time).format('hh:mm A');
-
-    } else {
-      time = moment().format('hh:mm A');
-    }
-    return 'As of ' + time;
-  }
-  getCurrentTemp = (s) => {
-    let t = undefined;
-    if (this.state.currentWeather) {
-      t = this.state.currentWeather.currentTemp;
-    } else {
-      t = '70';
-    }
-
-    return t + '\u00b0 ' + this.state.format;
-
-  }
-
-  getCurrentDesc = (s) => {
-
-    if (this.state.currentWeather) {
-
-      return this.state.currentWeather.mainDesc;
-    } else {
-      return 'Sunny';
-    }
-
-  }
-
   render() {
     const { loading } = this.state;
     const isExtendedDataAvailable = false;

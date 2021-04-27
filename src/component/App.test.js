@@ -13,4 +13,5 @@ describe("App Component", () => {
     const tree = renderer.create(<App></App>).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
 });
