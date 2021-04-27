@@ -1,24 +1,34 @@
 import { render, screen } from '@testing-library/react';
 import Service from './Service';
+import WeatherService from './WeatherService';
+import LocationService from './LocationService';
 
-test('test getCities', () => {
+describe("Service Tests", () => {
+    let appContext = {
+        setState: function () {
 
-    let myCities = Service.getZipCities();
-    expect(myCities.length > 0);
+        }
+    };
 
-});
+    test('test getCities', () => {
 
-test('test getCurrentWeatherDefault', () => {
+        let myCities = new LocationService({}).getZipCities();
+        expect(myCities.length > 0);
 
-    let myWeather = Service.getCurrentWeatherDefault();
-    expect(myWeather.name === 'East Windsor');
-    expect(myWeather.weather).toHaveLength(1);
+    });
 
-});
+    test('test getCurrentWeatherDefault', () => {
 
-test('test getHourlyWeather', () => {
+        let myWeather = new WeatherService(appContext).getCurrentWeatherDefault();
+        expect(myWeather.name === 'East Windsor');
+        expect(myWeather.weather).toHaveLength(1);
 
-    let myWeather = Service.getHourlyWeather();
-    expect(myWeather).toBeDefined;
+    });
 
+    test('test getHourlyWeather', () => {
+
+        let myWeather = new WeatherService(appContext).getHourlyWeather();
+        expect(myWeather).toBeDefined;
+
+    })
 });

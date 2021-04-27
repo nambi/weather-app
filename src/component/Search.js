@@ -2,16 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import Select from 'react-select';
 
-
 class Search extends Component {
 
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { zipCity, zipCities } = this.props.state;
-    // const zipCities  = this.props.zipCities;
-    // const zipCity = this.props.zipCity;
 
     return (
       <div className="container-fluid search-container">
