@@ -34,8 +34,11 @@ class App extends Component {
   }
 
   handleChange = (targetName) => (selectedOption) => {
-    this.weatherService.getCurrentWeather(selectedOption);
-    this.setState({ loading: true });
+    
+    if (selectedOption && selectedOption.zip) {
+      this.weatherService.getCurrentWeather(selectedOption);
+      this.setState({ loading: true });
+    }
   }
   render() {
     const { loading } = this.state;

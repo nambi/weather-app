@@ -3,7 +3,7 @@
  */
 class Service {
     DEFAULT_UNITS = 'imperial';
-    DEFAULT_COUNTRY = 'USA';
+    DEFAULT_COUNTRY = 'US';
     
     constructor(appContext) {
         this.app = appContext;

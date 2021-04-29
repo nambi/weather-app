@@ -8,7 +8,7 @@ class WeatherService extends Service {
 
     OPEN_WEATHER_ENDPOINT = 'http://api.openweathermap.org/data/2.5/weather';
     OPEN_WEATHER_APPID = '722b7f47e0d860226dd9f348ed8430d3';
-    
+
     getCurrentWeatherDefault(zipCity) {
         return DataTransform.processCurrentWeatherSuccess(Model.CurrentWeather);
     }
@@ -54,7 +54,8 @@ class WeatherService extends Service {
         let result = this.getCurrentWeatherDefault();
 
         if (selectedCity) {
-            let query = selectedCity.city + ',' + selectedCity.state_id + ',' + that.DEFAULT_COUNTRY + '&units=' + that.DEFAULT_UNITS;
+            let city = selectedCity.city.replace(/ /g, '+');
+            let query = city + ',' + selectedCity.state_id + ',' + that.DEFAULT_COUNTRY + '&units=' + that.DEFAULT_UNITS;
             let options = {
                 url: that.OPEN_WEATHER_ENDPOINT + '?q=' + query + '&APPID=' + that.OPEN_WEATHER_APPID,
                 method: 'GET'
