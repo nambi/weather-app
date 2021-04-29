@@ -28,12 +28,13 @@ class CurrentWeather extends Component {
     }
     getCurrentTemp = (s) => {
         let t = undefined;
-        if (this.props.state.currentWeather) {
+        if (this.props.state.currentWeather.currentTemp) {
             t = this.props.state.currentWeather.currentTemp;
+            t = t + '\u00b0 ' + this.props.state.format;
         } else {
-            t = '70';
+            t = 'No Data Avaialble';
         }
-        return t + '\u00b0 ' + this.props.state.format;
+        return t;
     }
 
     getCurrentDesc = (s) => {
