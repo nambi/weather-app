@@ -10,15 +10,17 @@ class CurrentWeather extends Component {
         if (this.props.state.zipCity) {
             return this.props.state.zipCity.city + "," + this.props.state.zipCity.state_id + "," + this.props.state.zipCity.zip;
         } else {
-            return 'East Windsor,NJ,08520';
+            return 'East Windsor,NJ,8520';
         }
     }
 
     getCurrentTime = (s) => {
         let time = undefined;
-        let defaultTime = new Date('December 17, 1995 03:24:00').getTime();
+        let defaultTime = new Date().getTime();
+        
         if (this.props.state.currentWeather) {
-            time = moment(this.props.state.currentWeather.time).format('hh:mm A');
+            let m  = this.props.state.currentWeather.time;
+            time = m.format('hh:mm A');
         } else {
             time = moment(defaultTime).format('hh:mm A');
         }

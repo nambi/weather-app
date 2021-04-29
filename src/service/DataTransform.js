@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 const DataTransform = {
 
@@ -7,7 +7,7 @@ const DataTransform = {
         let currentWeather = {
             mainDesc: response.weather[0].main,
             currentTemp: response.main.temp,
-            time: response.dt
+            time: moment.utc(response.dt*1000).utcOffset(response.timezone/60)
         };
         return currentWeather;
     },
@@ -16,7 +16,7 @@ const DataTransform = {
         let currentWeather = {
             mainDesc: 'No Data Available',
             currentTemp: '0',
-            time: moment()
+            time: moment().utc()
         };
         return currentWeather;
     }
