@@ -5,7 +5,7 @@ An easy to use weather app to quickly get to know the outside weather by city or
 
  Select a city from available cities or search for any US cities by name or zipcode and it will get the current weather details.
 
-![Alt text](/public/current-state-apr26.png?raw=true "Optional Title")
+![Alt text](/public/current-state-apr28.png?raw=true "Current State of the App as of 4/28/2021")
 
 
 ## High Level Design
